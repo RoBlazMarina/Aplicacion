@@ -1,3 +1,5 @@
+package acceso2;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -35,7 +37,7 @@ public class ConexionMySQL {
      * @param bd Base de datos a la que nos conectamos
      */
     public ConexionMySQL(String usuario, String pass, String bd) {
-        HOST = "localhost";
+        HOST = "localhost:1521";
         USUARIO = usuario;
         PASS = pass;
         BD = bd;
@@ -49,7 +51,7 @@ public class ConexionMySQL {
      */
     private void registrarDriver() throws SQLException {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("oracle.jdbc.OracleDriver");
         } catch (ClassNotFoundException e) {
             throw new SQLException("Error al conectar con MySQL: " + e.getMessage());
         }
@@ -63,12 +65,8 @@ public class ConexionMySQL {
     public void conectar() throws SQLException {
         if (connection == null || connection.isClosed()) {
             registrarDriver();
-            // Obtengo la zona horaria
-            Calendar now = Calendar.getInstance();
-            zonahoraria = now.getTimeZone();
-            connection = (Connection) DriverManager.getConnection("jdbc:mysql://" + HOST + "/" + BD + "?user="
-                    + USUARIO + "&password=" + PASS + "&useLegacyDatetimeCode=false&serverTimezone="
-                    + zonahoraria.getID());
+            connection = (Connection) DriverManager.getConnection("jdbc:oracle:thin:@//" + HOST + "/" + BD, USUARIO,PASS);
+            
         }
     }
 
