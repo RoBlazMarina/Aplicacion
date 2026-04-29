@@ -1,0 +1,12 @@
+prestamojuegos_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-madrid-1.oraclecloud.com))(connect_data=(service_name=gf6093f309cf2d3_prestamojuegos_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+prestamojuegos_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-madrid-1.oraclecloud.com))(connect_data=(service_name=gf6093f309cf2d3_prestamojuegos_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+prestamojuegos_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-madrid-1.oraclecloud.com))(connect_data=(service_name=gf6093f309cf2d3_prestamojuegos_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+prestamojuegos_tp = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-madrid-1.oraclecloud.com))(connect_data=(service_name=gf6093f309cf2d3_prestamojuegos_tp.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+prestamojuegos_tpurgent = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-madrid-1.oraclecloud.com))(connect_data=(service_name=gf6093f309cf2d3_prestamojuegos_tpurgent.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+
+

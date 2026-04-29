@@ -37,10 +37,10 @@ public class ConexionMySQL {
      * @param bd Base de datos a la que nos conectamos
      */
     public ConexionMySQL(String usuario, String pass, String bd) {
-        HOST = "localhost:1521";
+        HOST = "Wallet_PrestamoJuegos";
         USUARIO = usuario;
         PASS = pass;
-        BD = bd;
+        BD = "prestamosjuegos_high";
         connection = null;
     }
 
@@ -65,6 +65,9 @@ public class ConexionMySQL {
     public void conectar() throws SQLException {
         if (connection == null || connection.isClosed()) {
             registrarDriver();
+            
+            String url = "jdbc:oracle:thin:@" + BD + "?TNS_ADMIN=" + HOST;
+
             connection = (Connection) DriverManager.getConnection("jdbc:oracle:thin:@//" + HOST + "/" + BD, USUARIO,PASS);
             
         }
